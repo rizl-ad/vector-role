@@ -14,10 +14,12 @@ Role Variables
 Example Playbook
 ----------------
 
-- name: 'Play name'
-  hosts: servers
-  roles:
+```yaml
+- name: 'Play name'   
+  hosts: servers   
+  roles:   
     - vector
+```
 
 License
 -------
