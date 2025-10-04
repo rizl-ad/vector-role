@@ -1,0 +1,25 @@
+---
+# tasks file for vector-role
+- name: Get vector packages
+  ansible.builtin.get_url:
+    url: "https://packages.timber.io/vector/0.50.0/vector-{{ vector_version }}.x86_64.rpm"
+    dest: "./vector-{{ vector_version }}.rpm"
+    mode: "0644"
+
+- name: Install vector package
+  become: true
+  ansible.builtin.yum:
+    disable_gpg_check: true
+    name:
+      - vector-{{ vector_version }}.rpm
+
+- name: Vector configure
+  become: true
+  ansible.builtin.template:
+    src: "./templates/vector.j2"
+    dest: "/etc/vector/vector.yaml"
+    mode: "0644"
+  notify: Enable and start vector service
+
+- name: Notify vector handlers
+  ansible.builtin.meta: flush_handlers
