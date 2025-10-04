@@ -8,7 +8,7 @@ Role Variables
 
 | variable | default value | description |
 | -------- | ------------- | ----------- |
-| vector_version | 0.50.0-1 | Vector installation package version. Overridable variable |
+| `vector_version` | 0.50.0-1 | Vector installation package version. Overridable variable |
 
 
 Example Playbook
@@ -17,7 +17,7 @@ Example Playbook
 - name: 'Play name'
   hosts: servers
   roles:
-      - vector
+    - vector
 
 License
 -------
