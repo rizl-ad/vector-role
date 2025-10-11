@@ -1,5 +1,5 @@
-Lighthouse
-=========
+Vector
+======
 
 This role downloads the Vector installation package, installs it, and creates a configuration file.
 

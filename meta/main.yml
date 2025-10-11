@@ -1,7 +1,9 @@
 galaxy_info:
   author: Yaroslav Lysenko
   description: Installing Vector
-  company: No company
+  # company: No company
+  namespace: rizl_ad
+  role_name: vector
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
